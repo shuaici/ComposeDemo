@@ -21,22 +21,13 @@
 | `:app` | Application、导航图 `AppNavHost`、feature 组合入口 |
 | `:core:ui` | 设计系统（Theme / Token），业务模块只依赖其公开 API，不反向依赖 feature |
 
-当前代码量刻意保持小：**可运行 + 可扩展**，后续按 [docs/SERIES_ROADMAP.md](docs/SERIES_ROADMAP.md) 逐篇加厚。
+当前代码量刻意保持小：**可运行 + 可扩展**。
 
 ## 本地构建
 
 ```bash
 ./gradlew :app:assembleDebug
 ```
-
-## 文档索引
-
-> 说明：本仓库 `.gitignore` 排除了 `docs/`，推送到 GitHub 的克隆里默认没有该目录；完整 Markdown 在本地开发树中维护。
-
-- [给小白：为什么文档难读、需要什么基础](docs/给小白-如何读这些文档.md)
-- [系列文章（含截图点位，Markdown）](docs/articles/README.md)
-- [系列写作 backlog 与代码映射](docs/SERIES_ROADMAP.md)
-- [Compose / 状态相关 Code Review 清单（初稿）](docs/CODE_REVIEW_CHECKLIST.md)
 
 ## 许可
 
