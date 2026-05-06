@@ -1,0 +1,113 @@
+<resources>
+    <string name="app_name">ComposeDemo</string>
+    <string name="home_counter">计数：%1$d</string>
+    <string name="home_increment">+1</string>
+    <string name="home_open_about">关于本样例</string>
+    <string name="about_title">仓库说明</string>
+    <string name="about_body">本工程为「Compose 从入门到进阶」系列配套代码：Composable、状态、Modifier、副作用、LazyColumn、Navigation、Material3、重组与单测等。建议按系列示例顺序动手。</string>
+    <string name="about_back">返回</string>
+    <string name="nav_back">返回上一屏</string>
+    <string name="home_open_samples">系列示例（截图）</string>
+
+    <string name="samples_hub_title">系列示例入口</string>
+    <string name="samples_hub_intro">学习顺序与 docs/articles 一致：01～07 为 Compose 核心；08 文档测单测；09～12 为基础控件、自定义 Layout、动画/GraphicsLayer、Focus 与 IME（精通段）。第 00 篇请对照首页计数器 + MainActivity。</string>
+    <string name="samples_hub_footer_tests">08｜测试：在电脑终端运行文档中的 ./gradlew …StateSampleReducerTest，或打开该测试文件截图。</string>
+
+    <string name="sample_design_title">06｜Material3 与 Theme</string>
+    <string name="sample_design_body">推荐截图：两段背景对比。Token 段随主题变化；硬编码段在暗色模式下容易「看起来对、体系不对」。</string>
+    <string name="sample_design_token_label">使用 ComposeDemoTokens / Material 语义色</string>
+    <string name="sample_design_hardcoded_label">反例：Color(0xFF…) 写死在业务里（不要学）</string>
+
+    <string name="sample_state_title">01｜状态、Flow 与 Snackbar Effect</string>
+    <string name="sample_state_body">UiState 保持可渲染快照；一次性提示走 Effect → UI 用 LaunchedEffect 收集后 showSnackbar。</string>
+    <string name="sample_state_count">计数：%1$d</string>
+    <string name="sample_state_increment">计数 +1</string>
+    <string name="sample_state_save">保存（触发 Snackbar）</string>
+
+    <string name="sample_nav_title">05｜Navigation 与路由参数</string>
+    <string name="sample_nav_arg_label">路由参数 userId</string>
+    <string name="sample_nav_arg_empty">（空）</string>
+    <string name="sample_nav_hint">对应代码：Routes.PROFILE_WITH_ARGS + navArgument。可再截一张 NavHost 注册处。</string>
+
+    <string name="sample_lazy_title">04｜LazyColumn 与 item key</string>
+    <string name="sample_lazy_intro">列表项使用稳定 key（此处为 DemoRow.id）。截图时可打开 Layout Inspector 看重组热点（进阶篇再展开）。</string>
+
+    <string name="sample_side_effect_title">03｜LaunchedEffect / DisposableEffect</string>
+    <string name="sample_side_effect_intro">点按钮增大 key 可观察 LaunchedEffect 重复进入；点系统返回离开本屏，可观察 DisposableEffect 的 onDispose 日志。</string>
+    <string name="sample_side_effect_bump_key">让 LaunchedEffect 再跑一遍（key++）</string>
+    <string name="sample_side_effect_log_title">日志（新在上）</string>
+
+    <string name="sample_modifier_title">02｜Modifier 链与顺序</string>
+    <string name="sample_modifier_intro">同一尺寸下，padding / background / clickable 的先后顺序会改变绘制与点击区域。对照下面 A/B 与第三块。</string>
+    <string name="sample_modifier_case1">A：size → padding → background（内层蓝块不含外留白）</string>
+    <string name="sample_modifier_case2">B：size → background → padding（背景铺满 size）</string>
+    <string name="sample_modifier_case3">C：fillMaxWidth → clickable → padding → background</string>
+    <string name="sample_modifier_clickable_hint">整块宽条可点（先 clickable 再 padding）</string>
+
+    <string name="sample_stability_title">07｜重组与参数稳定性（实验）</string>
+    <string name="sample_stability_intro">点按钮增加父级 tick。观察两个「子组合次数」：入参每次变化 vs 入参保持不变时，SideEffect 计数增长是否不同。</string>
+    <string name="sample_stability_bump_parent">父级 tick +1</string>
+    <string name="sample_stability_parent_tick">父级 tick=%1$d</string>
+    <string name="sample_stability_bad">不稳定入参（label 随 tick 变）</string>
+    <string name="sample_stability_bad_hint">label = tick 字符串 → 每次父重组传入新值</string>
+    <string name="sample_stability_good">稳定入参（remember 固定字符串）</string>
+    <string name="sample_stability_good_hint">父级 tick=%1$d，但传入子项的 label 引用不变</string>
+    <string name="sample_stability_child_count">子项 SideEffect 计数：%1$d</string>
+
+    <string name="sample_controls_title">09｜基础控件与 Material3</string>
+    <string name="sample_controls_intro">本屏集中：Text、OutlinedTextField、Button+进度、Switch、AssistChip/FilterChip、RadioGroup、Checkbox、Slider（含 steps）、AlertDialog。对照 docs/articles/09。</string>
+    <string name="sample_controls_text_section">Text：maxLines + Ellipsis</string>
+    <string name="sample_controls_long_text">这是一段故意写得很长的说明文字，用来观察 maxLines 与 TextOverflow.Ellipsis 在窄屏上的折行与省略行为，不要依赖「截断后仍完整可读」。</string>
+    <string name="sample_controls_field_section">OutlinedTextField</string>
+    <string name="sample_controls_name_label">昵称（≥2 字）</string>
+    <string name="sample_controls_name_error">太短：展示 isError + supportingText</string>
+    <string name="sample_controls_clear">清空</string>
+    <string name="sample_controls_password_label">密码</string>
+    <string name="sample_controls_show_pw">显示</string>
+    <string name="sample_controls_hide_pw">隐藏</string>
+    <string name="sample_controls_button_section">Button + 短时 loading（协程）</string>
+    <string name="sample_controls_submit">提交（演示）</string>
+    <string name="sample_controls_switch_section">Switch</string>
+    <string name="sample_controls_agree">同意条款（否则按钮禁用）</string>
+    <string name="sample_controls_chip_section">AssistChip / FilterChip</string>
+    <string name="sample_controls_chip_body">AssistChip 偏「辅助动作」；筛选/开关语义用 FilterChip 的 selected + leadingIcon（勾选）。不要用 AssistChip 冒充主按钮。</string>
+    <string name="sample_controls_assist_label">Assist</string>
+    <string name="sample_controls_filter_label">筛选</string>
+    <string name="sample_controls_radio_section">RadioButton + selectableGroup</string>
+    <string name="sample_controls_radio_hint">整行 selectable + Role.RadioButton，避免只有小圆圈可点。RadioButton 的 onClick 可置 null 由 Row 处理。</string>
+    <string name="sample_controls_radio_opt1">月付</string>
+    <string name="sample_controls_radio_opt2">季付</string>
+    <string name="sample_controls_radio_opt3">年付</string>
+    <string name="sample_controls_checkbox_section">Checkbox</string>
+    <string name="sample_controls_checkbox_label">附加选项（演示与 Switch 独立）</string>
+    <string name="sample_controls_slider_section">Slider（steps=9 → 10 档）</string>
+    <string name="sample_controls_slider_value">当前约 %1$d%%</string>
+    <string name="sample_controls_slider_hint">拖动会高频重组；展示文案可用 remember(sliderValue) 或 derivedStateOf 降频。</string>
+    <string name="sample_controls_dialog_section">AlertDialog</string>
+    <string name="sample_controls_dialog_open">打开对话框</string>
+    <string name="sample_controls_dialog_title">示例对话框</string>
+    <string name="sample_controls_dialog_body">onDismissRequest 与返回键通常要对齐；确认/取消是否同一副作用要产品定义。</string>
+    <string name="sample_controls_dialog_ok">确定</string>
+    <string name="sample_controls_dialog_cancel">关闭</string>
+
+    <string name="sample_custom_layout_title">10｜自定义 Layout（Measure/Place）</string>
+    <string name="sample_custom_layout_intro">下面三个色块由自定义 HorizontalTapeLayout 横向串联：在 Layout lambda 里先 measure 再 place，与 Row 不同之处在于你可插入自己的换行/测量策略（此处为最小教学实现）。</string>
+    <string name="sample_custom_layout_caption">避坑：Scrollable 父级里子项若用 maxWidth=Infinity 的约束，需显式处理，否则易 IllegalStateException。</string>
+
+    <string name="sample_animation_title">11｜动画与 GraphicsLayer</string>
+    <string name="sample_animation_intro">animateFloatAsState、AnimatedVisibility、graphicsLayer（旋转）。注意：重组≠动画帧；动画应在快照之间插值。</string>
+    <string name="sample_animation_tween_title">animateFloatAsState 驱动宽度比例</string>
+    <string name="sample_animation_toggle_bar">展开 / 收起条</string>
+    <string name="sample_animation_visibility_title">AnimatedVisibility（与上面 expanded 共用状态）</string>
+    <string name="sample_animation_visibility_body">进入/退出可组合多种 Transition，注意不要在 enter/exit 里做重 IO。</string>
+    <string name="sample_animation_graphics_title">graphicsLayer</string>
+    <string name="sample_animation_graphics_hint">rotationZ/alpha/clip 等在 layer 上更省「触发布局」成本，滥用 clip 仍可能触发离屏缓冲，大列表里慎用。</string>
+    <string name="sample_animation_graphics_label">Layer 内文字</string>
+    <string name="sample_animation_flip">旋转 180°</string>
+
+    <string name="sample_focus_title">12｜Focus 与 IME（imePadding）</string>
+    <string name="sample_focus_intro">两个 OutlinedTextField：键盘「下一步」切换焦点；外层 Column 加 imePadding 减轻键盘遮挡。</string>
+    <string name="sample_focus_field1">第一行</string>
+    <string name="sample_focus_field2">第二行</string>
+    <string name="sample_focus_ime_note">真机上演示：弹出键盘后观察底部是否被顶起。若与 edge-to-edge 冲突，需结合 WindowInsets 与 Scaffold 内边距统一治理。</string>
+</resources>
